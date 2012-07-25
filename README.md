@@ -1,1 +1,7 @@
-# Simplex: Implementacao do algoritmo Simplex
+
+==================
+Programacao-Linear
+==================
+
+Implementação do Algoritmo Simplex
+
