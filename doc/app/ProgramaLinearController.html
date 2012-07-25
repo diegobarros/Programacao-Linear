@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class ProgramaLinearController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/programa_linear_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="Simplex.html">Simplex</a>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-abrir_exemplo">#abrir_exemplo</a>
+    
+    <li><a href="#method-i-configurar">#configurar</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-novo">#novo</a>
+    
+    <li><a href="#method-i-solucionar_problema">#solucionar_problema</a>
+    
+    <li><a href="#method-i-visualizar_exemplo">#visualizar_exemplo</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Simplex.html">Simplex</a>
+  
+    <li><a href="./Simplex/ProgramacaoLinear.html">Simplex::ProgramacaoLinear</a>
+  
+    <li><a href="./AdminUser.html">AdminUser</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CoeficienteFuncaoObjetivo.html">CoeficienteFuncaoObjetivo</a>
+  
+    <li><a href="./CoeficienteRestricao.html">CoeficienteRestricao</a>
+  
+    <li><a href="./FuncaoObjetivo.html">FuncaoObjetivo</a>
+  
+    <li><a href="./HomeController.html">HomeController</a>
+  
+    <li><a href="./HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="./OperadorAritmetico.html">OperadorAritmetico</a>
+  
+    <li><a href="./OperadorAritmeticoFuncaoObjetivo.html">OperadorAritmeticoFuncaoObjetivo</a>
+  
+    <li><a href="./OperadorAritmeticoRestricao.html">OperadorAritmeticoRestricao</a>
+  
+    <li><a href="./OperadorSentencial.html">OperadorSentencial</a>
+  
+    <li><a href="./ProgramaLinear.html">ProgramaLinear</a>
+  
+    <li><a href="./ProgramaLinearController.html">ProgramaLinearController</a>
+  
+    <li><a href="./ProgramaLinearHelper.html">ProgramaLinearHelper</a>
+  
+    <li><a href="./ProgramacaoLinear.html">ProgramacaoLinear</a>
+  
+    <li><a href="./Restricao.html">Restricao</a>
+  
+    <li><a href="./TipoOtimizacao.html">TipoOtimizacao</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ProgramaLinearController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-abrir_exemplo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">abrir_exemplo</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="abrir_exemplo-source">
+            <pre><span class="ruby-comment"># File app/controllers/programa_linear_controller.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abrir_exemplo</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- abrir_exemplo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- abrir_exemplo-method -->
+
+    
+      <div id="method-i-configurar" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">configurar</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="configurar-source">
+            <pre><span class="ruby-comment"># File app/controllers/programa_linear_controller.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">configurar</span>
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">formato</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">formato</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">programa_linear_novo</span> }
+    <span class="ruby-identifier">formato</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@programa_linear</span> }
+  <span class="ruby-keyword">end</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- configurar-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- configurar-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/programa_linear_controller.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+ 
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-novo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">novo</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="novo-source">
+            <pre><span class="ruby-comment"># File app/controllers/programa_linear_controller.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">novo</span>
+  
+  <span class="ruby-ivar">@programa_linear</span> = <span class="ruby-constant">ProgramaLinear</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">numero_variavel</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:numero_variaveis</span>]
+  <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">numero_restricao</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:numero_restricoes</span>]
+    
+  <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">funcao_objetivo</span> = <span class="ruby-constant">FuncaoObjetivo</span>.<span class="ruby-identifier">new</span> 
+  <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">numero_variavel</span>.<span class="ruby-identifier">times</span> {  <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">funcao_objetivo</span>.<span class="ruby-identifier">coeficiente_funcao_objetivo</span>.<span class="ruby-identifier">build</span> }
+     
+       
+  <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">numero_restricao</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">restricao</span> =  <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">restricoes</span>.<span class="ruby-identifier">build</span>
+    <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">numero_variavel</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">restricao</span>.<span class="ruby-identifier">coeficiente_restricoes</span>.<span class="ruby-identifier">build</span> }
+      
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> 
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@programa_linear</span>  }
+  <span class="ruby-keyword">end</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- novo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- novo-method -->
+
+    
+      <div id="method-i-solucionar_problema" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">solucionar_problema</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="solucionar_problema-source">
+            <pre><span class="ruby-comment"># File app/controllers/programa_linear_controller.rb, line 43</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">solucionar_problema</span>
+    
+   
+    <span class="ruby-ivar">@programa_linear</span> = <span class="ruby-constant">ProgramaLinear</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:programa_linear</span>])
+      
+    <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">numero_variavel</span> =  <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">funcao_objetivo</span>.<span class="ruby-identifier">coeficiente_funcao_objetivo</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">numero_restricao</span> = <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">restricoes</span>.<span class="ruby-identifier">length</span>
+    
+    <span class="ruby-ivar">@coeficiente_objetivo</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>()
+    <span class="ruby-ivar">@constante_restricao</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>()
+    <span class="ruby-ivar">@coeficientes_restricoes</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>() { <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> }
+      
+    <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">funcao_objetivo</span>.<span class="ruby-identifier">coeficiente_funcao_objetivo</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">coeficiente</span> <span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@coeficiente_objetivo</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">coeficiente</span>.<span class="ruby-identifier">valor</span>)
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">restricoes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">coeficiente</span> <span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@constante_restricao</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">coeficiente</span>.<span class="ruby-identifier">constante</span>)
+    <span class="ruby-keyword">end</span>
+    
+          
+<span class="ruby-comment">#    for i in 1..@programa_linear.numero_restricao</span>
+<span class="ruby-comment">#      for j in 1..@programa_linear.numero_variavel</span>
+<span class="ruby-comment">#        </span>
+<span class="ruby-comment">#        @coeficientes_restricoes[i][j] = @programa_linear.restricoes[i].coeficiente_restricoes[j].valor</span>
+<span class="ruby-comment">#      end</span>
+<span class="ruby-comment">#    end</span>
+  
+   
+    <span class="ruby-identifier">a</span> = [[<span class="ruby-value">2</span>,<span class="ruby-value">1</span>], [<span class="ruby-value">10</span>,<span class="ruby-value">12</span>]]
+    <span class="ruby-identifier">b</span> = [<span class="ruby-value">6</span>, <span class="ruby-value">60</span>]
+    <span class="ruby-identifier">c</span> = [<span class="ruby-value">5</span>, <span class="ruby-value">2</span>]
+
+   <span class="ruby-comment"># c = @coeficiente_objetivo</span>
+    
+    <span class="ruby-identifier">p</span> = <span class="ruby-constant">ProgramacaoLinear</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">a</span>, <span class="ruby-ivar">@constante_restricao</span>, <span class="ruby-ivar">@coeficiente_objetivo</span>)
+    <span class="ruby-identifier">p</span>.<span class="ruby-constant">SolucionaProblema</span>
+    
+    <span class="ruby-identifier">p</span>.<span class="ruby-constant">Imprime</span>
+    <span class="ruby-comment">#render :text =&gt;@programa_linear.funcao_objetivo.coeficiente_funcao_objetivo.as_json.inspect</span>
+    <span class="ruby-comment">#render :text =&gt; @programa_linear.funcao_objetivo.coeficiente_funcao_objetivo[0].valor.as_json</span>
+<span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@programa_linear</span>.<span class="ruby-identifier">restricoes</span>.<span class="ruby-identifier">coeficiente_restricoes</span>.<span class="ruby-identifier">as_json</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- solucionar_problema-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- solucionar_problema-method -->
+
+    
+      <div id="method-i-visualizar_exemplo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">visualizar_exemplo</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="visualizar_exemplo-source">
+            <pre><span class="ruby-comment"># File app/controllers/programa_linear_controller.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">visualizar_exemplo</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- visualizar_exemplo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- visualizar_exemplo-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

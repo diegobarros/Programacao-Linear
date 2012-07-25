@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  FuncaoObjetivo: 
+  nome: MyString
+  descricao: MyText
+  numero_variavel: 1
+
+two:
+  FuncaoObjetivo: 
+  nome: MyString
+  descricao: MyText
+  numero_variavel: 1

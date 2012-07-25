@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  OperadorAritmetico_id: 1
+  Restricao_id: 1
+  posicao: 1
+
+two:
+  OperadorAritmetico_id: 1
+  Restricao_id: 1
+  posicao: 1

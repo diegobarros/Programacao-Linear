@@ -1,0 +1,137 @@
+digraph ProgramacaoLinear {
+  rankdir = "LR"; ranksep = "0.5"; nodesep = "0.4"; pad = "0.4,0.4"; margin = "0,0"; concentrate = "true"; labelloc = "t"; fontsize = "13"; fontname = "Arial Bold";
+  node [shape = "Mrecord", fontsize = "10", fontname = "Arial", margin = "0.07,0.05", penwidth = "1.0"];
+  edge [fontname = "Arial", fontsize = "7", dir = "both", arrowsize = "0.9", penwidth = "1.0", labelangle = "32", labeldistance = "1.8"];
+  label = "ProgramacaoLinear domain model\n\n";
+  "m_ActiveAdmin::Comment" [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">ActiveAdmin::Comment</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="author_id">author_id <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="author_type">author_type <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="body">body <font face="Arial Italic" color="grey60">text ∗</font></td></tr>
+  <tr><td align="left" width="130" port="namespace">namespace <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="resource_id">resource_id <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="resource_type">resource_type <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+>];
+  m_AdminUser [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">AdminUser</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="current_sign_in_at">current_sign_in_at <font face="Arial Italic" color="grey60">datetime</font></td></tr>
+  <tr><td align="left" width="130" port="current_sign_in_ip">current_sign_in_ip <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="email">email <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="encrypted_password">encrypted_password <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="last_sign_in_at">last_sign_in_at <font face="Arial Italic" color="grey60">datetime</font></td></tr>
+  <tr><td align="left" width="130" port="last_sign_in_ip">last_sign_in_ip <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="remember_created_at">remember_created_at <font face="Arial Italic" color="grey60">datetime</font></td></tr>
+  <tr><td align="left" width="130" port="reset_password_sent_at">reset_password_sent_at <font face="Arial Italic" color="grey60">datetime</font></td></tr>
+  <tr><td align="left" width="130" port="reset_password_token">reset_password_token <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="sign_in_count">sign_in_count <font face="Arial Italic" color="grey60">integer</font></td></tr>
+</table>
+>];
+  m_CoeficienteFuncaoObjetivo [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">CoeficienteFuncaoObjetivo</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="valor">valor <font face="Arial Italic" color="grey60">float ∗</font></td></tr>
+</table>
+>];
+  m_CoeficienteRestricao [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">CoeficienteRestricao</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="valor">valor <font face="Arial Italic" color="grey60">float ∗</font></td></tr>
+</table>
+>];
+  m_FuncaoObjetivo [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">FuncaoObjetivo</font></td></tr>
+</table>
+>];
+  m_OperadorAritmetico [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">OperadorAritmetico</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="nome">nome <font face="Arial Italic" color="grey60">string (45) ∗</font></td></tr>
+  <tr><td align="left" width="130" port="simbolo">simbolo <font face="Arial Italic" color="grey60">string (1) ∗</font></td></tr>
+</table>
+>];
+  m_OperadorAritmeticoFuncaoObjetivo [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">OperadorAritmeticoFuncaoObjetivo</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="posicao">posicao <font face="Arial Italic" color="grey60">integer</font></td></tr>
+</table>
+>];
+  m_OperadorAritmeticoRestricao [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">OperadorAritmeticoRestricao</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="posicao">posicao <font face="Arial Italic" color="grey60">integer</font></td></tr>
+</table>
+>];
+  m_OperadorSentencial [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">OperadorSentencial</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="nome">nome <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+  <tr><td align="left" width="130" port="simbolo">simbolo <font face="Arial Italic" color="grey60">string ∗</font></td></tr>
+</table>
+>];
+  m_ProgramaLinear [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">ProgramaLinear</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="descricao">descricao <font face="Arial Italic" color="grey60">text</font></td></tr>
+  <tr><td align="left" width="130" port="nome">nome <font face="Arial Italic" color="grey60">string</font></td></tr>
+  <tr><td align="left" width="130" port="numero_restricao">numero_restricao <font face="Arial Italic" color="grey60">integer</font></td></tr>
+  <tr><td align="left" width="130" port="numero_variavel">numero_variavel <font face="Arial Italic" color="grey60">integer</font></td></tr>
+</table>
+>];
+  m_Restricao [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">Restricao</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="constante">constante <font face="Arial Italic" color="grey60">float ∗</font></td></tr>
+</table>
+>];
+  m_TipoOtimizacao [label = <<table border="0" align="center" cellspacing="0.5" cellpadding="0" width="134">
+  <tr><td align="center" valign="bottom" width="130"><font face="Arial Bold" point-size="11">TipoOtimizacao</font></td></tr>
+</table>
+|
+<table border="0" align="left" cellspacing="2" cellpadding="0" width="134">
+  <tr><td align="left" width="130" port="nome">nome <font face="Arial Italic" color="grey60">string (9) ∗</font></td></tr>
+</table>
+>];
+  m_FuncaoObjetivo -> m_CoeficienteFuncaoObjetivo [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_Restricao -> m_CoeficienteRestricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_TipoOtimizacao -> m_FuncaoObjetivo [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_FuncaoObjetivo -> m_CoeficienteFuncaoObjetivo [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_FuncaoObjetivo -> m_ProgramaLinear [arrowhead = "none", arrowtail = "none", weight = "1"]
+  m_FuncaoObjetivo -> m_OperadorAritmeticoFuncaoObjetivo [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_OperadorAritmetico -> m_OperadorAritmeticoFuncaoObjetivo [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_OperadorAritmetico -> m_OperadorAritmeticoRestricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_FuncaoObjetivo -> m_OperadorAritmeticoFuncaoObjetivo [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_OperadorAritmetico -> m_OperadorAritmeticoFuncaoObjetivo [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_OperadorAritmetico -> m_OperadorAritmeticoRestricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_Restricao -> m_OperadorAritmeticoRestricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_OperadorSentencial -> m_Restricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_FuncaoObjetivo -> m_ProgramaLinear [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_ProgramaLinear -> m_Restricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_ProgramaLinear -> m_Restricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_OperadorSentencial -> m_Restricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_Restricao -> m_CoeficienteRestricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_Restricao -> m_OperadorAritmeticoRestricao [arrowhead = "normal", arrowtail = "none", weight = "1"]
+  m_TipoOtimizacao -> m_FuncaoObjetivo [arrowhead = "normal", arrowtail = "none", weight = "1"]
+}

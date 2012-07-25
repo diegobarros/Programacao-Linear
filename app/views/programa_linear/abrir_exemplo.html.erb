@@ -1,0 +1,40 @@
+<div id="container-conteudo-principal" class="azul">
+<header>
+	<h2>Programação Linear</h2>
+	<h3>Exemplos</h3>
+	<hr />
+</header>
+
+<article>
+	<table>
+	<thead>
+		<tr>
+			<th class="coluna-id">ID</th>
+			<th class="coluna-nome">Nome</th>
+			<th class="coluna-opcao"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @programa_linear.each do |programa| %>
+			<tr>
+				<td class="coluna-id"><%= programa.id %></td>
+				<td class="coluna-nome"><%= link_to programa.nome, programa_linear_visualizar_exemplo_path(programa) %></td>
+				<td class="coluna-opcao"><%= link_to 'Abrir', programa_linear_visualizar_exemplo_path(programa) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+<br />	
+</article>
+
+</div>
+
+<footer>
+	<nav>
+		<ul>
+			<li><%= link_to "Voltar", home_index_path %></li>
+			<li><%= link_to "Novo", programa_linear_index_path %></li>	
+		</ul>	
+	</nav>	
+</footer>
+

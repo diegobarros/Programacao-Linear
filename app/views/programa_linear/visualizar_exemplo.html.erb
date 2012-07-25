@@ -1,0 +1,77 @@
+<div id="container-conteudo-principal" class="azul">
+<header>
+	<h2>Programação Linear</h2>
+	<h3>Exemplo - <%= @programa_linear.nome %></h3>
+	<hr />
+</header>
+
+<article>
+	
+	<%= form_tag("solucionar_exemplo", :method => "get") do %>
+<fieldset>	
+	<legend>Programa Linear</legend>
+	<%= hidden_field_tag "id", @programa_linear.id %>
+	
+	<%= label_tag  :nome %>
+	<%= text_field_tag "nome", @programa_linear.nome, :class => 'campo-nome' %>
+	<br />
+	<%= label_tag  :descricao %>
+	<%= text_area_tag "descricao", @programa_linear.descricao %>
+	
+</fieldset>
+<fieldset>
+	<legend>Função Objetivo</legend>
+	<ul>
+		<li><%= label_tag  :tipo_otimizacao %></li>
+		<li><%= collection_select "otimizacao", @programa_linear.funcao_objetivo.tipo_otimizacao_id, TipoOtimizacao.all, :id, :nome %></li>
+	
+	
+	
+		<% for i in 0..@programa_linear.numero_variavel-1 do %>
+	
+			<li><%= text_field_tag "coeficiente", @programa_linear.funcao_objetivo.coeficiente_funcao_objetivo[i].valor %></li>
+			<li>X<sub><%= i+1 %></sub></li>
+	
+
+		<% end %>
+	</ul>
+	
+	
+</fieldset>
+<fieldset>
+	<legend>Restrições</legend>
+	
+	
+		<% for i in 0..@programa_linear.numero_restricao-1 do %>
+			<ul>
+				<%for j in 0..@programa_linear.numero_variavel-1 %>
+					<li><%= text_field_tag "coeficiente", @programa_linear.restricoes[i].coeficiente_restricoes[j].valor %></li>
+					<li>X<sub><%= j+1 %></sub></li>
+				<% end %>
+				
+				<li><%= collection_select "operador_sentencial", @programa_linear.restricoes[i].operador_sentencial_id, OperadorSentencial.all, :id, :simbolo, :selected => @programa_linear.restricoes[i].operador_sentencial_id,  :disabled => true  %></li>
+				<li><%= text_field_tag "constante_restricao", @programa_linear.restricoes[i].constante %></li>
+			</ul>
+		<% end %>
+	</ul>
+	
+</fieldset>
+
+<fieldset>
+	<legend>Não Negatividade</legend>
+	
+	<ul>
+		<% for i in 0..@programa_linear.numero_variavel-1 do %>
+			<li>X<sub><%= i+1 %></sub>≥ 0</li>
+		<% end %>
+	</ul>
+	
+</fieldset>
+
+<%= submit_tag "Solucionar", :class => "botao botao-azul" %>
+
+
+<% end %>
+
+</article>
+</div>

@@ -1,0 +1,88 @@
+<div id="container-conteudo-principal" class="azul">
+<header>
+	<h2>Programação Linear</h2>
+	<h3>Novo Programa Linear</h3>
+	<hr />	
+</header>
+
+<article>
+	
+<%= form_for @programa_linear, :onload => 'enumera_variaveis()', :url => { :action => "solucionar_problema" } do |f|  %>
+<fieldset>	
+	<legend>Programa Linear</legend>
+	<%= f.label  :nome %>
+	<%= f.text_field  :nome, :class => 'campo-nome', :autofocus => true %><br />
+	
+	<%= f.label  :descricao %><br />
+	<%= f.text_area :descricao %><br />
+</fieldset>
+
+<fieldset>	
+	<legend>Função Objetivo</legend>
+	
+	
+	<for>
+	
+	<%= f.fields_for :funcao_objetivo do |campo_funcao| %>
+		<ul>
+			<li><%= campo_funcao.collection_select :tipo_otimizacao_id, TipoOtimizacao.all, :id, :nome %></li>
+				
+			<%= campo_funcao.fields_for :coeficiente_funcao_objetivo do |campo_coeficiente| %>
+				<%=content_tag(:li, campo_coeficiente.text_field(:valor))%>
+				
+				
+				<%=content_tag(:li, content_tag(:i, "X") + content_tag(:sub, 1)) %>
+				
+			<% end %>
+		</ul>
+	<% end %>
+</fieldset>
+
+<fieldset>	
+	<legend>Restrições</legend>
+	
+	<%= f.fields_for :restricoes do |campo_restricao, i| %>
+		<ul>
+			
+			<%= campo_restricao.fields_for :coeficiente_restricoes do |campo_coeficiente| %>
+				<%=content_tag(:li, campo_coeficiente.text_field(:valor))%>
+				<%=content_tag(:li, content_tag(:i, "X") + content_tag(:sub, 1))%>
+			<% end %>
+			
+		
+			<li><%= campo_restricao.collection_select :operador_sentencial_id, OperadorSentencial.all, :id, :simbolo %></li>
+			<li><%= campo_restricao.text_field :constante %></li>
+				
+		</ul>
+	<% end %>
+
+</fieldset>
+
+
+<fieldset>
+	<legend>Não Negatividade</legend>
+	
+	<ul>
+		<% for i in 0..@programa_linear.numero_variavel-1 do %>
+			<li>X<sub><%= i+1 %></sub>≥ 0</li>
+		<% end %>
+	</ul>
+	
+</fieldset>
+
+
+<%= f.submit "Solucionar", :class => 'botao botao-azul' %>
+
+<% end %>
+</article>
+</div>
+<footer>
+	<nav>
+		<ul>
+			<li><%= link_to "Voltar", home_index_path %></li>
+			<li><%= link_to "Novo", programa_linear_index_path %></li>	
+		</ul>	
+	</nav>	
+</footer>
+
+

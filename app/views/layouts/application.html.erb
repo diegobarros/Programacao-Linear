@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SIMPLEX - Programação Linear</title>
+  <%= stylesheet_link_tag    "estilo", :media => "all" %>
+  <%= javascript_include_tag "application", 'jquery' %>
+  <%= javascript_include_tag "programa_linear" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<a href="/">
+			<h1>Simplex</h1>
+			<h4>Progamação Linear</h4>
+		</a>
+	</header>
+	<div id="container">
+		
+		<section>
+			<%= yield %>	
+		</section>	
+	</div>
+</body>
+</html>

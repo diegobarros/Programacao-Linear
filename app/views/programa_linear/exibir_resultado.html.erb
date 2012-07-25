@@ -1,0 +1,57 @@
+<div id="container-conteudo-principal" class="azul">
+<header>
+	<h2>Programação Linear</h2>
+	<h3>Resultado - <span>Algoritmo Simplex</span></h3>
+	<hr />
+</header>
+
+<article>
+<table id="tabela-resultados">
+<thead>
+  <tr>
+    <% for i in 0..session[:programacao_linear].numeroDeCoeficientes + session[:programacao_linear].numeroDeRestricoes %>
+		<%= content_tag(:th) %>
+    <% end %>
+  </tr>
+</thead>
+<tbody>
+<% for i in 0..session[:programacao_linear].numeroDeRestricoes %>
+	<tr>
+		<% for j in 0..session[:programacao_linear].numeroDeCoeficientes + session[:programacao_linear].numeroDeRestricoes %>
+			<%= content_tag(:td, session[:programacao_linear].programaLinearAuxiliar[i][j])%>
+		<% end %>
+	</tr>
+<% end %>
+</tbody>
+</table>
+
+<div>
+	
+	<ul>
+		<li><label>Valor Ótimo: </label></li>
+		<li><%= content_tag(:span, session[:programacao_linear].ValorObjetivoOtimo())%></li>
+	</ul>
+	<ul>
+		<% for i in 0..session[:programacao_linear].numeroDeRestricoes-1 %>
+		
+			<% if session[:programacao_linear].variaveisBasicas[i] < session[:programacao_linear].numeroDeCoeficientes %>
+		    	<%=content_tag(:li, content_tag(:i, "X") + content_tag(:sub, (session[:programacao_linear].variaveisBasicas[i] + 1).to_s) + "  =  " + session[:programacao_linear].programaLinearAuxiliar[i][session[:programacao_linear].numeroDeRestricoes + session[:programacao_linear].numeroDeCoeficientes].to_s)%>
+			<% end %>
+    	<% end %>
+	</ul>
+</div>
+</article>
+</div>
+
+<footer>
+	<nav>
+		<ul>
+			<li><%= link_to "Início", home_index_path %></li>
+			<li><%= link_to "Novo", programa_linear_index_path %></li>	
+		</ul>	
+	</nav>	
+</footer>
+
+
+
+

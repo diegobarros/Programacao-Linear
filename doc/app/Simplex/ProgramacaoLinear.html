@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class Simplex::ProgramacaoLinear - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/assets/simplex.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-Imprime">#Imprime</a>
+    
+    <li><a href="#method-i-SolucaoDual">#SolucaoDual</a>
+    
+    <li><a href="#method-i-SolucaoPrimal">#SolucaoPrimal</a>
+    
+    <li><a href="#method-i-SolucionaProblema">#SolucionaProblema</a>
+    
+    <li><a href="#method-i-ValorObjetivoOtimo">#ValorObjetivoOtimo</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Simplex.html">Simplex</a>
+  
+    <li><a href="../Simplex/ProgramacaoLinear.html">Simplex::ProgramacaoLinear</a>
+  
+    <li><a href="../AdminUser.html">AdminUser</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../CoeficienteFuncaoObjetivo.html">CoeficienteFuncaoObjetivo</a>
+  
+    <li><a href="../CoeficienteRestricao.html">CoeficienteRestricao</a>
+  
+    <li><a href="../FuncaoObjetivo.html">FuncaoObjetivo</a>
+  
+    <li><a href="../HomeController.html">HomeController</a>
+  
+    <li><a href="../HomeHelper.html">HomeHelper</a>
+  
+    <li><a href="../OperadorAritmetico.html">OperadorAritmetico</a>
+  
+    <li><a href="../OperadorAritmeticoFuncaoObjetivo.html">OperadorAritmeticoFuncaoObjetivo</a>
+  
+    <li><a href="../OperadorAritmeticoRestricao.html">OperadorAritmeticoRestricao</a>
+  
+    <li><a href="../OperadorSentencial.html">OperadorSentencial</a>
+  
+    <li><a href="../ProgramaLinear.html">ProgramaLinear</a>
+  
+    <li><a href="../ProgramaLinearController.html">ProgramaLinearController</a>
+  
+    <li><a href="../ProgramaLinearHelper.html">ProgramaLinearHelper</a>
+  
+    <li><a href="../ProgramacaoLinear.html">ProgramacaoLinear</a>
+  
+    <li><a href="../Restricao.html">Restricao</a>
+  
+    <li><a href="../TipoOtimizacao.html">TipoOtimizacao</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Simplex::ProgramacaoLinear</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="EPSILON">EPSILON
+        
+        <dd class="description"><p><a href="ProgramacaoLinear.html#EPSILON">EPSILON</a> = 1.0E-1</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-coeficientesDaFuncaoObjetivo" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">coeficientesDaFuncaoObjetivo</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-coeficientesDasRestricoes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">coeficientesDasRestricoes</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-numeroDeCoeficientes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">numeroDeCoeficientes</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-numeroDeRestricoes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">numeroDeRestricoes</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-termosConstantesDasRestricoes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">termosConstantesDasRestricoes</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-variaveisBasicas" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">variaveisBasicas</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(coeficientesRestricoes, termosConstantesRestricoes, coeficientesFuncaoObjetivo)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/assets/simplex.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">coeficientesRestricoes</span>, <span class="ruby-identifier">termosConstantesRestricoes</span>, <span class="ruby-identifier">coeficientesFuncaoObjetivo</span>)
+  <span class="ruby-ivar">@coeficientesDasRestricoes</span> = <span class="ruby-identifier">coeficientesRestricoes</span>
+  <span class="ruby-ivar">@termosConstantesDasRestricoes</span> = <span class="ruby-identifier">termosConstantesRestricoes</span>
+  <span class="ruby-ivar">@coeficientesDaFuncaoObjetivo</span> = <span class="ruby-identifier">coeficientesFuncaoObjetivo</span>
+  
+  <span class="ruby-ivar">@numeroDeRestricoes</span> = <span class="ruby-identifier">termosConstantesRestricoes</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-ivar">@numeroDeCoeficientes</span> = <span class="ruby-identifier">coeficientesFuncaoObjetivo</span>.<span class="ruby-identifier">length</span>
+  
+  <span class="ruby-ivar">@programaLinearAuxiliar</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numeroDeRestricoes</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>){ <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numeroDeCoeficientes</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@numeroDeRestricoes</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>){ <span class="ruby-constant">Float</span>(<span class="ruby-string">&quot;0&quot;</span>) }}
+    
+  <span class="ruby-constant">InicializaSimplex</span>()
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-Imprime" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">Imprime</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="Imprime-source">
+            <pre><span class="ruby-comment"># File lib/assets/simplex.rb, line 321</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Imprime</span>
+  
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n\n\n\tNúmero de Restrições = &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@numeroDeRestricoes</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n\tNúmero de Coeficientes = &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@numeroDeRestricoes</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\n\n\n&quot;</span>
+  
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-ivar">@numeroDeRestricoes</span>
+     <span class="ruby-keyword">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-ivar">@numeroDeCoeficientes</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@numeroDeRestricoes</span>
+          <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;\t&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@programaLinearAuxiliar</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>].<span class="ruby-identifier">to_s</span>
+     <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">puts</span>
+  <span class="ruby-keyword">end</span>
+  
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-ivar">@numeroDeRestricoes</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@variaveisBasicas</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@numeroDeCoeficientes</span> <span class="ruby-keyword">then</span>
+        
+        <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;\n\n\nX_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@variaveisBasicas</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; = &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@programaLinearAuxiliar</span>[<span class="ruby-identifier">i</span>][<span class="ruby-ivar">@numeroDeRestricoes</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@numeroDeCoeficientes</span>].<span class="ruby-identifier">to_s</span>
+      
+      <span class="ruby-keyword">end</span>      
+      <span class="ruby-identifier">puts</span>
+    <span class="ruby-keyword">end</span>
+ 
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Valor = &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">ValorObjetivoOtimo</span>().<span class="ruby-identifier">to_s</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- Imprime-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- Imprime-method -->
+
+    
+      <div id="method-i-SolucaoDual" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">SolucaoDual</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retorna o vetor com a solução dual</p>
+          
+
+          
+          <div class="method-source-code" id="SolucaoDual-source">
+            <pre><span class="ruby-comment"># File lib/assets/simplex.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">SolucaoDual</span>
+  
+  <span class="ruby-identifier">solucaoDual</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numeroDeRestricoes</span>)
+  
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-ivar">@numeroDeRestricoes</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>
+    <span class="ruby-identifier">solucaoDual</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-operator">-</span><span class="ruby-ivar">@programaLinearAuxiliar</span>[<span class="ruby-ivar">@numeroDeRestricoes</span>][<span class="ruby-ivar">@numeroDeCoeficientes</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>]
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">solucaoDual</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- SolucaoDual-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- SolucaoDual-method -->
+
+    
+      <div id="method-i-SolucaoPrimal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">SolucaoPrimal</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retorna o vetor com a solução primal</p>
+          
+
+          
+          <div class="method-source-code" id="SolucaoPrimal-source">
+            <pre><span class="ruby-comment"># File lib/assets/simplex.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">SolucaoPrimal</span>
+  
+  <span class="ruby-identifier">solucaoPrimal</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@numeroDeCoeficientes</span>)
+  
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-ivar">@numeroDeRestricoes</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@variaveisBasicas</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@numeroDeCoeficientes</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">solucaoPrimal</span>[<span class="ruby-ivar">@variaveisBasicas</span>[<span class="ruby-identifier">i</span>]] = <span class="ruby-ivar">@programaLinearAuxiliar</span>[<span class="ruby-identifier">i</span>][<span class="ruby-ivar">@numeroDeRestricoes</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@numeroDeCoeficientes</span>]  
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">solucaoPrimal</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- SolucaoPrimal-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- SolucaoPrimal-method -->
+
+    
+      <div id="method-i-SolucionaProblema" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">SolucionaProblema</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Roda o algoritmo <a href="../Simplex.html">Simplex</a> começando do BFS
+inicial</p>
+          
+
+          
+          <div class="method-source-code" id="SolucionaProblema-source">
+            <pre><span class="ruby-comment"># File lib/assets/simplex.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">SolucionaProblema</span>
+  
+  <span class="ruby-identifier">coluna</span> = <span class="ruby-constant">MenorIndiceColunaNaoBasica</span>()
+  
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">coluna</span> <span class="ruby-operator">!=</span> <span class="ruby-value">-1</span>
+    
+    <span class="ruby-identifier">linha</span> = <span class="ruby-constant">MenorTaxaAjuste</span>(<span class="ruby-identifier">coluna</span>)
+   
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-string">'Programa Linear Ilimitado'</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">linha</span> <span class="ruby-operator">==</span> <span class="ruby-value">-1</span>
+    
+    <span class="ruby-constant">Pivot</span>(<span class="ruby-identifier">linha</span>, <span class="ruby-identifier">coluna</span>)
+    
+    <span class="ruby-ivar">@variaveisBasicas</span>[<span class="ruby-identifier">linha</span>] = <span class="ruby-identifier">coluna</span>
+    
+    <span class="ruby-identifier">coluna</span> = <span class="ruby-constant">MenorIndiceColunaNaoBasica</span>()
+    
+  <span class="ruby-keyword">end</span>
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- SolucionaProblema-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- SolucionaProblema-method -->
+
+    
+      <div id="method-i-ValorObjetivoOtimo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ValorObjetivoOtimo</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retorna o valor objetivo ótimo</p>
+          
+
+          
+          <div class="method-source-code" id="ValorObjetivoOtimo-source">
+            <pre><span class="ruby-comment"># File lib/assets/simplex.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">ValorObjetivoOtimo</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-operator">-</span><span class="ruby-ivar">@programaLinearAuxiliar</span>[<span class="ruby-ivar">@numeroDeRestricoes</span>][<span class="ruby-ivar">@numeroDeRestricoes</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@numeroDeCoeficientes</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- ValorObjetivoOtimo-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- ValorObjetivoOtimo-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
